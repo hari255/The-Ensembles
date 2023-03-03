@@ -1,0 +1,24 @@
+## sudo code for Boosting Algorithm
+
+# Input 
+
+// Sample distribution = D;
+// Base Learning Algorithm = L;
+// Number of learning trails  = T;
+
+# Process
+
+1. D1 = D    => initializing distribution.
+
+2.  for t in range T:
+        h_(t) = L(D_(t));    => Training a weak learner from distribution D_(t)
+
+        ephslon_(t) = P_(x~_D_(t)) * (h_(t)*(x) != f(x) )  => evaluating the errors of h_(t)
+
+        D_(t+1) = Adjust_distribuiton(Dt, Et)
+
+
+    end   
+
+# Output H(x) = Combine_outputs({h1(x), h2(x),........,ht(x)}) 
+
